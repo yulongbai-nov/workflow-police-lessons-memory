@@ -1,0 +1,41 @@
+{
+  "policyVersion": "1.0.0",
+  "workflowMode": "spec-first",
+  "specRoot": ".specs",
+  "requiredDocs": [
+    "AGENTS.md",
+    ".specs"
+  ],
+  "preflight": {
+    "required": true,
+    "artifactGlob": "logs/agent/preflight/*.json",
+    "maxAgeHours": 24
+  },
+  "deterministicChecks": {
+    "requirePreflightArtifact": true,
+    "requireSpecDocs": true
+  },
+  "qualityGates": [
+    {
+      "id": "lint",
+      "description": "Optional lint command; set command per repo.",
+      "command": "",
+      "required": false
+    },
+    {
+      "id": "test",
+      "description": "Optional test command; set command per repo.",
+      "command": "",
+      "required": false
+    }
+  ],
+  "semanticReview": {
+    "enabled": true,
+    "engine": "codex_subprocess",
+    "model": "gpt-5.3-codex",
+    "timeoutSec": 180,
+    "maxFindings": 6,
+    "blockOnSeverity": [],
+    "schemaPath": "scripts/config/agent/semantic_review_schema.json"
+  }
+}
