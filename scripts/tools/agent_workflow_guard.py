@@ -45,6 +45,13 @@ def main() -> int:
         elif not list(spec_root.rglob("*.md")):
             add_finding("medium", "empty-spec-root", f"No spec markdown files found under {spec_root}")
 
+    lessons_cfg = policy.get("lessons", {})
+    index_rel = lessons_cfg.get("indexPath")
+    if index_rel:
+        index_path = repo_root / index_rel
+        if not index_path.exists():
+            add_finding("medium", "missing-lessons-index", f"Lessons index missing: {index_path}")
+
     preflight_cfg = policy.get("preflight", {})
     if preflight_cfg.get("required", False) and checks.get("requirePreflightArtifact", False):
         pattern = str((repo_root / preflight_cfg.get("artifactGlob", "logs/agent/preflight/*.json")).as_posix())

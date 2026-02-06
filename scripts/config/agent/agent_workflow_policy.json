@@ -2,6 +2,16 @@
   "policyVersion": "1.0.0",
   "workflowMode": "spec-first",
   "specRoot": ".specs",
+  "lessons": {
+    "root": "lessons",
+    "indexPath": "lessons/index.json",
+    "fallbackHeadingsPath": "LESSONS.md",
+    "selection": {
+      "principlesMax": 2,
+      "patternsMax": 2,
+      "casesMax": 2
+    }
+  },
   "requiredDocs": [
     "AGENTS.md",
     ".specs"

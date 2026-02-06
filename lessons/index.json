@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "1.0.0",
+  "generatedAt": "2026-02-06T00:32:15.390108Z",
+  "stats": {
+    "total": 3,
+    "byLevel": {
+      "case": 1,
+      "pattern": 1,
+      "principle": 1
+    },
+    "byStatus": {
+      "candidate": 3,
+      "validated": 0,
+      "canonical": 0,
+      "retired": 0
+    }
+  },
+  "lessons": [
+    {
+      "id": "case-template",
+      "level": "case",
+      "status": "candidate",
+      "tags": [
+        "example"
+      ],
+      "confidence": 3,
+      "transferability": 2,
+      "source_case_ids": [],
+      "last_validated_at": "2026-02-06",
+      "title": "Example Case Lesson",
+      "summary": "Replace this with incident summary.",
+      "path": "lessons/cases/case-template.md"
+    },
+    {
+      "id": "pattern-template",
+      "level": "pattern",
+      "status": "candidate",
+      "tags": [
+        "example"
+      ],
+      "confidence": 3,
+      "transferability": 4,
+      "source_case_ids": [
+        "case-template"
+      ],
+      "last_validated_at": "2026-02-06",
+      "title": "Example Pattern Lesson",
+      "summary": "Replace this with reusable pattern summary.",
+      "path": "lessons/patterns/pattern-template.md"
+    },
+    {
+      "id": "principle-template",
+      "level": "principle",
+      "status": "candidate",
+      "tags": [
+        "example"
+      ],
+      "confidence": 4,
+      "transferability": 5,
+      "source_case_ids": [
+        "case-template"
+      ],
+      "last_validated_at": "2026-02-06",
+      "title": "Example Principle",
+      "summary": "Replace this with stable cross-domain guidance.",
+      "path": "lessons/principles/principle-template.md"
+    }
+  ]
+}

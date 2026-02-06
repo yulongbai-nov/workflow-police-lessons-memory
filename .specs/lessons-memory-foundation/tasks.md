@@ -11,20 +11,20 @@
   - [x] 4.5 Add aggregate workflow guard script with warn/block modes (Python-first).
   - [x] 4.6 Add safe deletion wrapper script for non-ad-hoc removals.
   _Requirements: 3, 5, 6, 7, 8_
-- [ ] 5. Add lessons hierarchy bootstrap and index tooling.
-  - [ ] 5.1 Define lesson file templates for `case`, `pattern`, and `principle`.
-  - [ ] 5.2 Add index updater script for metadata normalization.
-  - [ ] 5.3 Add promotion helper script (`case -> pattern -> principle`).
+- [x] 5. Add lessons hierarchy bootstrap and index tooling.
+  - [x] 5.1 Define lesson file templates for `case`, `pattern`, and `principle`.
+  - [x] 5.2 Add index updater script for metadata normalization.
+  - [x] 5.3 Add promotion helper script (`case -> pattern -> principle`).
   _Requirements: 1, 2, 4_
-- [ ] 6. Add preflight retriever with ranked selection from metadata index.
-  - [ ] 6.1 Implement token extraction and ranking.
-  - [ ] 6.2 Add deterministic fallback to latest validated lessons.
-  - [ ] 6.3 Emit stable preflight artifact and summary output.
+- [x] 6. Add preflight retriever with ranked selection from metadata index.
+  - [x] 6.1 Implement token extraction and ranking.
+  - [x] 6.2 Add deterministic fallback to latest validated lessons.
+  - [x] 6.3 Emit stable preflight artifact and summary output.
   _Requirements: 2, 3, 6_
-- [ ] 7. Integration and validation.
-  - [ ] 7.1 Wire guard scripts into a sample repo runbook.
-  - [ ] 7.2 Add smoke tests for script syntax and minimal execution paths.
-  - [ ] 7.3 Document rollout and phase-2 MCP expansion path.
+- [x] 7. Integration and validation.
+  - [x] 7.1 Wire guard scripts into a sample repo runbook.
+  - [x] 7.2 Add smoke tests for script syntax and minimal execution paths.
+  - [x] 7.3 Document rollout and phase-2 MCP expansion path.
   _Requirements: 3, 5, 6_
 
 ## Implementation Notes
@@ -52,8 +52,8 @@
 ## Current Status Summary
 
 - Active phase: design with implementation spike for guard scripts.
-- Completed next steps: draft architecture, external-best-practice mapping, and semantic sub-instance guard prototype.
+- Completed next steps: draft architecture, external-best-practice mapping, semantic sub-instance guard prototype, structured lessons hierarchy tooling, ranked preflight, and runbook integration tests.
 - Next concrete tasks:
-  1. Implement lessons hierarchy templates and index updater.
-  2. Implement ranked preflight retrieval.
-  3. Add end-to-end sample runbook.
+  1. Add CI workflow examples for multi-platform runners.
+  2. Add optional MCP-backed federated retrieval adapter.
+  3. Add lesson aging dashboard/report generation.
